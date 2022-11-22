@@ -19,9 +19,12 @@ namespace OOInvestigation
 
         public override void Display()
         {
-            Console.WriteLine("Contractor:");
-            base.Display();
-            Console.WriteLine("Agency:" + Agency);
+            Console.WriteLine(ToString());
+        }
+
+        public override string? ToString()
+        {
+            return $"Contractor:\n{base.ToString()}\nAgency:{Agency}";
         }
     }
 }

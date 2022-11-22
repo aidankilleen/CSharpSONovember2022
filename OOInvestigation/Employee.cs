@@ -22,10 +22,12 @@ namespace OOInvestigation
         public override void Display()
         {
             //Console.WriteLine(_id);
-            Console.WriteLine("Employee:");
-            //Console.WriteLine(FirstName + " " +  LastName);
-            base.Display();
-            Console.WriteLine("EmployeeId:"+ EmployeeId);
+            Console.WriteLine(ToString());
+        }
+
+        public override string? ToString()
+        {
+            return $"Employee:\n{base.ToString()}\nEmployeeId:{EmployeeId}";
         }
     }
 }

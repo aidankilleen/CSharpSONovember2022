@@ -67,15 +67,47 @@ namespace CollectionInvestigation
 
             foreach(User u in userList)
             {
-                Console.WriteLine(u.Name);
+                Console.WriteLine(u.ToString());
             }
 
+            Console.WriteLine("Comparison test");
 
+            User u1 = new User { Id = 8, Name = "Harriet", Email = "harriet@gmail.com", Active = true };
+            User u2 = new User { Id = 8, Name = "Harriet", Email = "harriet@gmail.com", Active = true };
+            //User u2 = u1;
 
-            
+            if (u1.Equals(u2))
+            {
+                Console.WriteLine("They are the same");
+            } else
+            {
+                Console.WriteLine("They are different");
+            }
 
+            Console.WriteLine(u1.GetHashCode());
+            Console.WriteLine(u2.GetHashCode());
 
+            if (u1.GetHashCode() == u2.GetHashCode())
+            {
+                Console.WriteLine("The same");
+            } else
+            {
+                Console.WriteLine("Different");
+            }
 
+            // we can create a heterogenous list of 
+            // anything
+            Object[] stuff =
+            {
+                "a string",
+                u1,
+                99,
+                false,
+                99.99999
+            };
+
+            // but it's not particularly useful 
+            // since Object has very few features
 
 
 

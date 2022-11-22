@@ -25,5 +25,10 @@ namespace OOInvestigation
             base.Display();
             Console.WriteLine("Headcount:" + HeadCount);
         }
+
+        public override string? ToString()
+        {
+            return $"Manager:\n{base.ToString()}\nHeadCount:{HeadCount}";
+        }
     }
 }

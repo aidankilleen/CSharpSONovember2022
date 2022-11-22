@@ -13,7 +13,8 @@ namespace OOInvestigation
         public int Id { 
             get { return _id; } 
             set { _id = value; } 
-        }   
+        }
+
 
 
         public string FirstName { get; set; }
@@ -30,8 +31,12 @@ namespace OOInvestigation
         }
         public virtual void Display()
         {
-            Console.WriteLine("Person:");
-            Console.WriteLine(FirstName + " " + LastName);
+            Console.WriteLine(ToString());
+        }
+
+        public override string? ToString()
+        {
+            return $"Person:\n{FirstName} {LastName}";
         }
     }
 }
