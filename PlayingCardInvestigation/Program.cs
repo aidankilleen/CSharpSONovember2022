@@ -6,16 +6,16 @@
         {
             Console.WriteLine("Playing Card Investigation");
 
-            Card c = new Card(1, 1);
+            Card c = new Card(Suits.Heart, 1);
             c.Display(); // AH
 
-            c = new Card(2, 2);
+            c = new Card(Suits.Diamond, 2);
             c.Display();
 
-            c = new Card(4, 13);
+            c = new Card(Suits.Spade, 13);
             c.Display();
 
-            c = new Card(3, 12);
+            c = new Card(Suits.Club, 12);
             c.Display();
 
             Console.WriteLine("All cards:"); 
@@ -23,15 +23,13 @@
             {
                 for (int value = 1; value <= 13; value++)
                 {
-                    c = new Card(suit, value);
+                    c = new Card((Suits)suit, value);
                     c.Display();
                 }
             }
 
 
-            c = new Card(99, 99);
 
-            c.Display();
 
 
 

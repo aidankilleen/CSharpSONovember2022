@@ -17,7 +17,7 @@ namespace PlayingCardInvestigation
     internal class Card
     {
         // member variables (properties)
-        public int Suit;  // 1=H, 2=S, 3=D, 4=C
+        public Suits Suit;  // 1=H, 2=S, 3=D, 4=C
         public int Value; // 1=A, 2=2, 3=3, 4=4, ..., 10=10, 11=J, 12=Q, 13=K
 
         // member functions
@@ -26,7 +26,7 @@ namespace PlayingCardInvestigation
         public Card()
         {
         }
-        public Card(int suit, int value)
+        public Card(Suits suit, int value)
         {
             Suit = suit;
             Value = value;
@@ -69,16 +69,16 @@ namespace PlayingCardInvestigation
                     break;
             }
             // suit
-            if (Suit == 1)
+            if (Suit == Suits.Heart)
             {
                 card = card + "H ";
-            } else if (Suit == 2)
+            } else if (Suit == Suits.Spade)
             {
                 card += "S ";
-            } else if (Suit ==3)
+            } else if (Suit == Suits.Diamond)
             {
                 card += "D ";
-            } else if (Suit == 4)
+            } else if (Suit == Suits.Club)
             {
                 card += "C ";
             } else

@@ -22,7 +22,7 @@ namespace PlayingCardInvestigation
             {
                 for (int value = 1; value <= 13; value++)
                 {
-                    cards[count++] = new Card(suit, value);
+                    cards[count++] = new Card((Suits)suit, value);
                 }
             }
         }
@@ -96,7 +96,10 @@ namespace PlayingCardInvestigation
             c.Display();
 
 
+            //Card badCard = new Card(-1, 1);
 
+            c = new Card((Suits)99, 99);
+            c.Display();
 
 
         }
