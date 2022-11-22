@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectInvestigation", "Obje
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayingCardInvestigation", "PlayingCardInvestigation\PlayingCardInvestigation.csproj", "{08523C31-063B-42E8-8EBA-C5BB89833DE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOInvestigation", "OOInvestigation\OOInvestigation.csproj", "{6E25886E-F4B3-43CC-9DD6-E269F6270176}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{08523C31-063B-42E8-8EBA-C5BB89833DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08523C31-063B-42E8-8EBA-C5BB89833DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08523C31-063B-42E8-8EBA-C5BB89833DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E25886E-F4B3-43CC-9DD6-E269F6270176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E25886E-F4B3-43CC-9DD6-E269F6270176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E25886E-F4B3-43CC-9DD6-E269F6270176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E25886E-F4B3-43CC-9DD6-E269F6270176}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
