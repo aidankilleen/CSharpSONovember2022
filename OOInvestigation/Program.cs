@@ -14,7 +14,19 @@
                                     "Adams", 
                                       "E12345");
             e.Display();
-            
+
+
+            Contractor c = new Contractor("Bob", "Byrne",
+                        "CPL");
+            c.Display();
+
+            Manager m = new Manager("Carol", "Conway",
+                                "E1111", 12);
+
+            m.Display();
+
+
+
 
             // Abstraction (the ability to create an object)
 

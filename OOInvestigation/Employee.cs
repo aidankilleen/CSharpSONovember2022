@@ -21,6 +21,7 @@ namespace OOInvestigation
         }
         public override void Display()
         {
+            //Console.WriteLine(_id);
             Console.WriteLine("Employee:");
             //Console.WriteLine(FirstName + " " +  LastName);
             base.Display();
