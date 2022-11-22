@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOInvestigation", "OOInvest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringInvestigation", "StringInvestigation\StringInvestigation.csproj", "{E4CB0369-7CE8-4881-9F5B-0D6B84338484}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionInvestigation", "CollectionInvestigation\CollectionInvestigation.csproj", "{7DF6F9AB-B9DA-41E6-A846-F74D548FD235}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{E4CB0369-7CE8-4881-9F5B-0D6B84338484}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4CB0369-7CE8-4881-9F5B-0D6B84338484}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4CB0369-7CE8-4881-9F5B-0D6B84338484}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DF6F9AB-B9DA-41E6-A846-F74D548FD235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DF6F9AB-B9DA-41E6-A846-F74D548FD235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DF6F9AB-B9DA-41E6-A846-F74D548FD235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DF6F9AB-B9DA-41E6-A846-F74D548FD235}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
