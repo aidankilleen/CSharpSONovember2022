@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace PlayingCardInvestigation
 {
+    enum Suits
+    {
+        Heart = 1, 
+        Spade, 
+        Diamond, 
+        Club
+    }
+
     internal class Card
     {
         // member variables (properties)
@@ -42,8 +50,10 @@ namespace PlayingCardInvestigation
                 case 7:
                 case 8:
                 case 9:
-                case 10:
                     card += " " + Value;
+                    break;
+                case 10:
+                    card += "" + Value;
                     break;
                 case 11:
                     card += " J";

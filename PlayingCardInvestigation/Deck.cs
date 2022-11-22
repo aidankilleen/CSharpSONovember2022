@@ -46,8 +46,23 @@ namespace PlayingCardInvestigation
             return cards[nextCard++];
         }
 
-        // other methods
 
+        public void Shuffle(int count = 100)
+        {
+            // pick two random numbers
+            Random rg = new Random();
+
+            for (int i = 0; i < count; i++) {
+                int r1 = rg.Next(52);
+                int r2 = rg.Next(52);
+
+                // swap the cards at those locations
+                Card t = cards[r1];
+                cards[r1] = cards[r2];
+                cards[r2] = t;
+            }
+        }
+        // other methods
         static void Main(string[] args)
         {
             Console.WriteLine("Deck Investigation");
@@ -55,7 +70,17 @@ namespace PlayingCardInvestigation
             Deck deck = new Deck();
             deck.Display();
 
-            // deck.Shuffle();
+            deck.Shuffle();
+            deck.Display();
+
+            deck.Shuffle(10);
+            deck.Display();
+
+            deck.Shuffle(100);
+            deck.Display();
+
+            deck.Shuffle(1000);
+            deck.Display();
 
 
 
