@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DaoInvestigation
 {
-    internal class InMemoryUserDao
+    internal class InMemoryUserDao : IUserDao
     {
         List<User> users = new List<User>();
 
@@ -20,8 +20,15 @@ namespace DaoInvestigation
 
         public User GetUser(int id)
         {
-            int index = FindUser(id);
-            return users[index];
+            try
+            {
+                int index = FindUser(id);
+                return users[index];
+
+            } catch (Exception ex)
+            {
+                throw new UserDaoException($"User not found {id}");
+            }
         }
         public List<User> GetUsers()
         {
@@ -65,6 +72,10 @@ namespace DaoInvestigation
             {
                 users.RemoveAt(index);
             }
+        }
+        public void Close()
+        {
+            users.Clear();
         }
     }
 }

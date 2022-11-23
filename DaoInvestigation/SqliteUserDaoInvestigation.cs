@@ -11,7 +11,20 @@ namespace DaoInvestigation
         static void Main(string[] args)
         {
             Console.WriteLine("Sqlite User Dao Investigation");
-            SqliteUserDao dao = new SqliteUserDao();
+            //IUserDao dao = new InMemoryUserDao();
+
+            IUserDao dao = new SqliteUserDao();
+
+            try
+            {
+                User u4 = dao.GetUser(999);
+                Console.WriteLine(u4);
+
+            } catch (UserDaoException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
 
 
             User newUser = new User(-1, "NEW", "new.user@gmail.com", false);
@@ -30,6 +43,8 @@ namespace DaoInvestigation
             {
                 Console.WriteLine(u);
             }
+
+            dao.Close();
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DaoInvestigation
 {
-    internal class SqliteUserDao
+    internal class SqliteUserDao : IUserDao
     {
         public static string connectionString = @"Data Source=C:\work\training\CSharpCSONovember2022\CSharpSONovember2022\users.db";
         public SqliteConnection conn;
@@ -18,6 +18,30 @@ namespace DaoInvestigation
             conn.Open(); 
         }
 
+        public User GetUser(int id)
+        {
+            User user = null;
+
+            string sql = $"SELECT * FROM users WHERE id={ id }";
+
+            SqliteCommand cmd = conn.CreateCommand();
+            cmd.CommandText = sql;
+            SqliteDataReader rdr = cmd.ExecuteReader();
+
+            if (rdr.Read())
+            {
+                string name = rdr.GetString(rdr.GetOrdinal("name"));
+                string email = rdr.GetString(rdr.GetOrdinal("email"));
+                bool active = rdr.GetBoolean(rdr.GetOrdinal("active"));
+
+                user = new User(id, name, email, active);
+            } else
+            {
+                // throw user not found exception
+                throw new UserDaoException($"User not found {id}");
+            }
+            return user;
+        }
         public List<User>GetUsers() {
 
             List<User> users = new List<User>();
@@ -84,6 +108,11 @@ namespace DaoInvestigation
                 userToAdd.Id = rdr.GetInt32(0);
             }
             return userToAdd;
+        }
+
+        public void Close()
+        {
+            conn.Close();
         }
     }
 }
