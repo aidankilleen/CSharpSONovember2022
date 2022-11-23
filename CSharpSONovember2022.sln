@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticInvestigation", "Stat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionInvestigation", "ExceptionInvestigation\ExceptionInvestigation.csproj", "{AA15733E-F152-494A-A96E-3FAAB131D0C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteHelloWorld", "SqliteHelloWorld\SqliteHelloWorld.csproj", "{035D7475-58EA-4CC4-A267-9A7A5205E4FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{AA15733E-F152-494A-A96E-3FAAB131D0C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA15733E-F152-494A-A96E-3FAAB131D0C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA15733E-F152-494A-A96E-3FAAB131D0C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{035D7475-58EA-4CC4-A267-9A7A5205E4FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{035D7475-58EA-4CC4-A267-9A7A5205E4FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{035D7475-58EA-4CC4-A267-9A7A5205E4FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{035D7475-58EA-4CC4-A267-9A7A5205E4FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
