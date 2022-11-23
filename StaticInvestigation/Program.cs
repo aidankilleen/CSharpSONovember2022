@@ -10,6 +10,8 @@
             Message m2 = new Message("M2", "this is m2");
             Console.WriteLine(Message.Count);
 
+
+
             //Console.WriteLine
             //Program.Main()
 
