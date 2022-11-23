@@ -62,5 +62,28 @@ namespace DaoInvestigation
             cmd.ExecuteNonQuery();
             return userToUpdate;
         }
+        public User AddUser(User userToAdd)
+        {
+            string sql = $@"INSERT INTO users
+                            (name, email, active)
+                            VALUES(
+                            '{userToAdd.Name}', 
+                            '{userToAdd.Email}', 
+                            { (userToAdd.Active ? 1 : 0) })";
+            SqliteCommand cmd = conn.CreateCommand();
+            cmd.CommandText = sql;
+            cmd.ExecuteNonQuery();
+
+            cmd = conn.CreateCommand();
+            sql = "SELECT last_insert_rowid()";
+            cmd.CommandText = sql;
+            SqliteDataReader rdr = cmd.ExecuteReader();
+
+            if (rdr.Read())
+            {
+                userToAdd.Id = rdr.GetInt32(0);
+            }
+            return userToAdd;
+        }
     }
 }
