@@ -15,6 +15,9 @@ namespace DaoInvestigation
 
             dao.DeleteUser(3);
 
+            User userToUpdate = new User(5, "UPDATED", "updated@gmail.com", true);
+
+            dao.UpdateUser(userToUpdate);
 
             List<User> users = dao.GetUsers();
 

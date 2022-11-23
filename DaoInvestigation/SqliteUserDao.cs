@@ -48,5 +48,19 @@ namespace DaoInvestigation
             cmd.CommandText = sql;
             cmd.ExecuteNonQuery();
         }
+
+        public User UpdateUser(User userToUpdate)
+        {
+            string sql = $@"UPDATE users 
+                                SET name='{ userToUpdate.Name }', 
+                                    email='{ userToUpdate.Email  }', 
+                                    active={(userToUpdate.Active ? 1 : 0)} 
+                                WHERE id={ userToUpdate.Id }";
+
+            SqliteCommand cmd = conn.CreateCommand();
+            cmd.CommandText = sql;
+            cmd.ExecuteNonQuery();
+            return userToUpdate;
+        }
     }
 }
