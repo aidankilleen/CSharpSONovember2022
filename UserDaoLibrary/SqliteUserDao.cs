@@ -104,13 +104,44 @@ namespace UserDaoLibrary
             cmd.ExecuteNonQuery();
             return userToUpdate;
         }
-        public User AddUser(User userToAdd)
+        // suffers from SQL Injection
+        public User AddUserOriginal(User userToAdd)
         {
-            string sql = $@"INSERT INTO users(name, email, active) VALUES('{userToAdd.Name}','{userToAdd.Email}', { (userToAdd.Active ? 1 : 0) })";
+            string sql = $@"INSERT INTO users(name, email, active) VALUES('{userToAdd.Name}','{userToAdd.Email}', {(userToAdd.Active ? 1 : 0)})";
 
             Console.WriteLine(sql);
             SqliteCommand cmd = conn.CreateCommand();
+
             cmd.CommandText = sql;
+            cmd.ExecuteNonQuery();
+
+            cmd = conn.CreateCommand();
+            sql = "SELECT last_insert_rowid()";
+            cmd.CommandText = sql;
+            SqliteDataReader rdr = cmd.ExecuteReader();
+
+            if (rdr.Read())
+            {
+                userToAdd.Id = rdr.GetInt32(0);
+            }
+            return userToAdd;
+        }
+
+
+        public User AddUser(User userToAdd)
+        {
+            string sql = $@"INSERT INTO users(name, email, active) VALUES(@name, @email, @active)";
+
+            Console.WriteLine(sql);
+            SqliteCommand cmd = conn.CreateCommand();
+
+            cmd.CommandText = sql;
+
+            cmd.Parameters.Add(new SqliteParameter("@name", userToAdd.Name));
+            cmd.Parameters.Add(new SqliteParameter("@email", userToAdd.Email));
+            cmd.Parameters.Add(new SqliteParameter("@active", userToAdd.Active ? 1 : 0));
+
+            cmd.Prepare();
             cmd.ExecuteNonQuery();
 
             cmd = conn.CreateCommand();

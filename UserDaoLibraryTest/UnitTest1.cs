@@ -40,6 +40,7 @@ namespace UserDaoLibraryTest
             Assert.AreNotEqual(-1, addedUser.Id);
 
             dao.DeleteUser(addedUser.Id);
+            dao.Close();
         }
 
         [TestMethod]
@@ -49,19 +50,24 @@ namespace UserDaoLibraryTest
             {
                 dao.GetUser(9999);
             });
+            dao.Close();
         }
 
         [TestMethod]
         public void TestSqlInjection()
         {
+            //SqliteUserDao dao = new SqliteUserDao();
+            List<User> users = dao.GetUsers();
+            int count = users.Count;
+
             User u = new User(1,
-                "','',0); delete from users where id = 1;--", 
+                "','',0); delete from users;--", 
                 "", false);
             User addedUser = dao.AddUser(u);
 
-            User u1 = dao.GetUser(1);
-
-
+            users = dao.GetUsers();
+            Assert.AreEqual(count + 1, users.Count);
+            dao.Close();
         }
     }
 }
