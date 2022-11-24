@@ -25,6 +25,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteHelloWorld", "SqliteH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaoInvestigation", "DaoInvestigation\DaoInvestigation.csproj", "{36CC600C-7465-4C36-A54A-112A3A470A9A}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UserDaoLibrary", "UserDaoLibrary\UserDaoLibrary.shproj", "{C6405A19-16C7-4C19-AFA3-7CAB6F3910B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUserDaoInvestigation", "ConsoleUserDaoInvestigation\ConsoleUserDaoInvestigation.csproj", "{D03A5501-C38F-4BBF-94CB-2D8978AD94A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserDaoLibraryTest", "UserDaoLibraryTest\UserDaoLibraryTest.csproj", "{9E57EA9E-6AC3-4897-BC4F-BAF81AF98941}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,11 +81,24 @@ Global
 		{36CC600C-7465-4C36-A54A-112A3A470A9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36CC600C-7465-4C36-A54A-112A3A470A9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36CC600C-7465-4C36-A54A-112A3A470A9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D03A5501-C38F-4BBF-94CB-2D8978AD94A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D03A5501-C38F-4BBF-94CB-2D8978AD94A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D03A5501-C38F-4BBF-94CB-2D8978AD94A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D03A5501-C38F-4BBF-94CB-2D8978AD94A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E57EA9E-6AC3-4897-BC4F-BAF81AF98941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E57EA9E-6AC3-4897-BC4F-BAF81AF98941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E57EA9E-6AC3-4897-BC4F-BAF81AF98941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E57EA9E-6AC3-4897-BC4F-BAF81AF98941}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A817EEAB-7794-4D1E-87C8-1F19D08DB38E}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		UserDaoLibrary\UserDaoLibrary.projitems*{9e57ea9e-6ac3-4897-bc4f-baf81af98941}*SharedItemsImports = 5
+		UserDaoLibrary\UserDaoLibrary.projitems*{c6405a19-16c7-4c19-afa3-7cab6f3910b4}*SharedItemsImports = 13
+		UserDaoLibrary\UserDaoLibrary.projitems*{d03a5501-c38f-4bbf-94cb-2d8978ad94a5}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
