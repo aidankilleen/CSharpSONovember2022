@@ -1,9 +1,39 @@
 ﻿@page
-
+@using UserDaoLibrary;
 @{
 }
 
 <div class="text-center">
     <h1 class="display-4">User List</h1>
+
+    
+    @{
+        SqliteUserDao dao = new SqliteUserDao();
+        List<User> users = dao.GetUsers();
+        dao.Close();
+    }
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Active</th>
+            </tr>
+        </thead>
+        <tbody>
+        @{
+            foreach (User user in users) {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.Name</td>
+                        <td>@user.Email</td>
+                        <td>@(user.Active ? "Active" : "Inactive")</td>
+                    </tr>
+            }
+        }
+        </tbody>
+    </table>
+
 
 </div>

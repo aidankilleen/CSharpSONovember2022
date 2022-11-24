@@ -110,6 +110,7 @@ Global
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		UserDaoLibrary\UserDaoLibrary.projitems*{56ca728f-fc13-4b67-b01b-f2accc2f2bb5}*SharedItemsImports = 5
+		UserDaoLibrary\UserDaoLibrary.projitems*{6fedd441-bc39-4b82-878e-4307b332ac80}*SharedItemsImports = 5
 		UserDaoLibrary\UserDaoLibrary.projitems*{9e57ea9e-6ac3-4897-bc4f-baf81af98941}*SharedItemsImports = 5
 		UserDaoLibrary\UserDaoLibrary.projitems*{c6405a19-16c7-4c19-afa3-7cab6f3910b4}*SharedItemsImports = 13
 		UserDaoLibrary\UserDaoLibrary.projitems*{d03a5501-c38f-4bbf-94cb-2d8978ad94a5}*SharedItemsImports = 5
