@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserDaoLibraryTest", "UserD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaExpressionInvestigation", "LambdaExpressionInvestigation\LambdaExpressionInvestigation.csproj", "{56CA728F-FC13-4B67-B01B-F2ACCC2F2BB5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldWebApp", "HelloWorldWebApp\HelloWorldWebApp.csproj", "{6FEDD441-BC39-4B82-878E-4307B332AC80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,10 @@ Global
 		{56CA728F-FC13-4B67-B01B-F2ACCC2F2BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56CA728F-FC13-4B67-B01B-F2ACCC2F2BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56CA728F-FC13-4B67-B01B-F2ACCC2F2BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FEDD441-BC39-4B82-878E-4307B332AC80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FEDD441-BC39-4B82-878E-4307B332AC80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FEDD441-BC39-4B82-878E-4307B332AC80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FEDD441-BC39-4B82-878E-4307B332AC80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +109,7 @@ Global
 		SolutionGuid = {A817EEAB-7794-4D1E-87C8-1F19D08DB38E}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		UserDaoLibrary\UserDaoLibrary.projitems*{56ca728f-fc13-4b67-b01b-f2accc2f2bb5}*SharedItemsImports = 5
 		UserDaoLibrary\UserDaoLibrary.projitems*{9e57ea9e-6ac3-4897-bc4f-baf81af98941}*SharedItemsImports = 5
 		UserDaoLibrary\UserDaoLibrary.projitems*{c6405a19-16c7-4c19-afa3-7cab6f3910b4}*SharedItemsImports = 13
 		UserDaoLibrary\UserDaoLibrary.projitems*{d03a5501-c38f-4bbf-94cb-2d8978ad94a5}*SharedItemsImports = 5

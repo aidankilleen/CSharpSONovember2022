@@ -5,7 +5,13 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>LambdaExpressionInvestigation.ListProcessingInvestigation</StartupObject>
+    <StartupObject>LambdaExpressionInvestigation.LinqFunctionsInvestigation</StartupObject>
   </PropertyGroup>
+
+  <Import Project="..\UserDaoLibrary\UserDaoLibrary.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.0" />
+  </ItemGroup>
 
 </Project>
