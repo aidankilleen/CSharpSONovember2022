@@ -25,10 +25,17 @@
         @{
             foreach (User user in users) {
                     <tr>
-                        <td>@user.Id</td>
+                        <td><a 
+                            asp-area="" 
+                            asp-page="/UserDetail"
+                            asp-route-id="@user.Id">@user.Id</a></td>
                         <td>@user.Name</td>
                         <td>@user.Email</td>
                         <td>@(user.Active ? "Active" : "Inactive")</td>
+                        <td><a class="btn btn-danger"
+                               asp-area=""
+                               asp-page="/UserDelete"
+                               asp-route-id="@user.Id">Delete</a></td>
                     </tr>
             }
         }

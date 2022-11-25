@@ -1,0 +1,25 @@
+﻿@page
+@using UserDaoLibrary;
+
+@{
+    string sid = Request.Query["id"];
+    int id = int.Parse(sid);
+
+    string confirm = Request.Query["confirm"];
+
+    if (confirm != null) {
+        SqliteUserDao dao = new SqliteUserDao();
+        dao.DeleteUser(id);
+        dao.Close();
+        <h1>User @id Deleted</h1>
+    } else {
+        <h1>Are You Sure?</h1>
+        <a class="btn btn-danger"
+            asp-area=""
+            asp-page="/UserDelete"
+            asp-route-id="@id"
+            asp-route-confirm="yes"
+        >Yes</a>
+    }
+}
+

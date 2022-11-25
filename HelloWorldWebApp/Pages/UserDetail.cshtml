@@ -1,0 +1,37 @@
+﻿@page
+@using UserDaoLibrary;
+@{
+
+    // read the id parameter 
+    string sid = Request.Query["id"];
+    int id = int.Parse(sid);
+
+    SqliteUserDao dao = new SqliteUserDao();
+
+    User user = dao.GetUser(id);
+
+    dao.Close();
+
+}
+
+<div>
+    <h1 class="display-4">User Detail</h1>
+
+    <table class="table">
+        <tr>
+            <td>Id</td><td>@user.Id</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>@user.Name</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>@user.Email</td>
+        </tr>
+        <tr>
+            <td>Active</td>
+            <td>@(user.Active ? "Active" : "Inactive")</td>
+        </tr>
+    </table>
+</div>
