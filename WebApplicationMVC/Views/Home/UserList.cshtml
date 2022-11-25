@@ -1,0 +1,36 @@
+﻿@page
+
+@{
+}
+<div>
+    <h1>@ViewBag.Title</h1>
+
+    <table class="table">
+        <thead> 
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Active</th>
+            </tr>
+        </thead>
+        <tbody>
+        @{
+            foreach(var user in ViewBag.Users) {
+                <tr>
+                    <td>
+                        <a 
+                            asp-area="" 
+                            asp-controller="Home" 
+                            asp-action="UserDetail"
+                            asp-route-id="@user.Id">@user.Id</a>
+                    </td>
+                    <td>@user.Name</td>
+                    <td>@user.Email</td>
+                    <td>@user.Active</td>
+                </tr>
+            }
+        }
+        </tbody>
+    </table>
+</div>

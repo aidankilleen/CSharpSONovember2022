@@ -4,7 +4,7 @@ using UserDaoLibrary;
 namespace LinqInvestigation
 {
 
-    class Record
+    partial class Record
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -119,8 +119,49 @@ namespace LinqInvestigation
                 new Record(18, "Alice", "green", 20),
                 new Record(19, "Bob", "green", 15),
                 new Record(20, "Carol", "red", 10),
-                new Record(21, "Eve", "orange", 99)
+                new Record(21, "Eve", "orange", 99), 
+                new Record(22, "Fred", "pink", 21)
             };
+
+
+            var r = from record in data select record;
+
+            foreach(Record record in r)
+            {
+                Console.WriteLine(record);
+            }
+
+            Console.WriteLine("==========================");
+
+            var results = from record in data
+                      group record by record.Name into g
+                      select new
+                      {
+                          Name = g.Key,
+                          Total = g.Sum(r => r.Quantity), 
+                          Count = g.Count()
+                      };
+
+            foreach (var res in results)
+            {
+                Console.WriteLine(res);
+            }
+
+            var colourBreakdown = from record in data
+                                  group record by record.Colour into g
+                                  select new
+                                  {
+                                      Colour = g.Key,
+                                      Total = g.Sum(r => r.Quantity),
+                                      Count = g.Count()
+                                  };
+
+            foreach (var res in colourBreakdown)
+            {
+                Console.WriteLine(res);
+            }
+
+
 
         }
     }
